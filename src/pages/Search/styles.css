@@ -1,0 +1,164 @@
+.search {
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+.search__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.search__header {
+  margin-bottom: 48px;
+}
+
+.search__title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 32px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.search__input-wrapper {
+  position: relative;
+  max-width: 600px;
+}
+
+.search__input {
+  width: 100%;
+  padding: 20px 60px 20px 24px;
+  font-size: 18px;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 16px;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.search__input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.search__input::placeholder {
+  color: #666;
+}
+
+.search__icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  pointer-events: none;
+}
+
+.search__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.search__results-count {
+  font-size: 16px;
+  color: #888;
+  margin-top: 24px;
+}
+
+.search__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  gap: 16px;
+}
+
+.search__loading p {
+  color: #888;
+  font-size: 16px;
+}
+
+.search__no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  gap: 16px;
+}
+
+.search__no-results-icon {
+  font-size: 64px;
+  margin: 0;
+}
+
+.search__no-results-text {
+  font-size: 20px;
+  color: #888;
+  margin: 0;
+}
+
+.search__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+  gap: 16px;
+}
+
+.search__placeholder-icon {
+  font-size: 80px;
+  margin: 0;
+  opacity: 0.3;
+}
+
+.search__placeholder-text {
+  font-size: 20px;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .search__grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+
+  .search__title {
+    font-size: 36px;
+  }
+
+  .search__input {
+    font-size: 16px;
+    padding: 16px 50px 16px 20px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .search {
+    background: #fafafa;
+  }
+
+  .search__input {
+    background: #fff;
+    border-color: #e0e0e0;
+    color: #000;
+  }
+
+  .search__input::placeholder {
+    color: #999;
+  }
+
+  .search__input:focus {
+    border-color: #667eea;
+  }
+}
